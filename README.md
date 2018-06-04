@@ -41,4 +41,4 @@ npm run dev
 Functional with allowing users to vote on the poll and prevents duplicate votes. Currently working on allowing users to create multiple polls.
 
 ## Creator 
-Nadim Uddin [[nuddin95](https://github.com/nu7124)]
+Nadim Uddin [[nu7124](https://github.com/nu7124)]
