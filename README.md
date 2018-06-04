@@ -7,7 +7,7 @@ A web app built with smart contracts that allows users to create and share polls
 
 ### Clone the Repo
 ```shell
-git clone https://github.com/nu7214/voting-block.git
+git clone https://github.com/nu7124/voting-block.git
 cd voting-block
 ```
 
