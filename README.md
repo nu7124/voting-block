@@ -1,7 +1,7 @@
 # Voting Block
 
 ## Objective
-A web app that allows users to create and share polls where other users can cast their vote. 
+A web app built with smart contracts that allows users to create and share polls with other users.
 
 ## Install
 
