@@ -1,5 +1,7 @@
 # Voting Block
 
+*In progress*
+
 ## Objective
 A web app built with smart contracts that allows users to create and share polls with other users.
 
