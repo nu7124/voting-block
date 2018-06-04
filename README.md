@@ -16,6 +16,10 @@ cd voting-block
 npm install -g truffle
 ```
 
+### Install Metamask
+#### Make sure you have the Metamask chrome extension installed
+* [Install Metamask](https://metamask.io/)
+
 ### Install and Run
 #### Before you run make sure you install Ganache and have it running. 
 * [Install Ganache](http://truffleframework.com/ganache/)
