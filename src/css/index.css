@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main {
+    background-color: red;
+    width:100%;
+    height:100vh;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+
+#main-topBar {
+    width:100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#main-topBar-create {
+    margin:5%;
+}
