@@ -8,18 +8,28 @@ contract Election {
         uint voteCount;
     }
 
+    //mapping to keep track of people who voted
     mapping(address => bool) public voters;
 
+    //mapping of all id numbers to corresponding candidates
     mapping(uint => Candidate) public candidates;
+    
+    //keeps track of candidate so we can access them in the mapping
     uint public candidatesCount;
 
-    event votedEvent (
-        uint indexed _candidateId
-    );
+    //stores the creator of the election poll
+    address public creator;
 
-    function Election() public{
-        addCandidate("Candidate 1");
-        addCandidate("Candidate 2");
+    //stores the title of the poll
+    string public question;
+
+    function Election(address _creator, string allCandidates, string _question) public {
+        creator = _creator;
+        question = _question;
+        addCandidate(allCandidates);
+        // for(uint i=0; i<allCandidates.length; i++){
+        //     addCandidate(allCandidates[i]);
+        // }
     }
 
     function addCandidate(string _name) private {
@@ -34,7 +44,5 @@ contract Election {
         voters[msg.sender] = true;
 
         candidates[_candidateId].voteCount ++;
-
-        votedEvent(_candidateId);
     }
 }

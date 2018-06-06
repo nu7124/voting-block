@@ -1,0 +1,858 @@
+{
+  "contractName": "ElectionFactory",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_creator",
+          "type": "address"
+        },
+        {
+          "name": "allCandidates",
+          "type": "string"
+        },
+        {
+          "name": "_question",
+          "type": "string"
+        }
+      ],
+      "name": "newElection",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x608060405234801561001057600080fd5b50610adf806100206000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063033a0b0114610046575b600080fd5b34801561005257600080fd5b50610113600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610155565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008084848461016361029b565b808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156101d65780820151818401526020810190506101bb565b50505050905090810190601f1680156102035780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b8381101561023c578082015181840152602081019050610221565b50505050905090810190601f1680156102695780820380516001836020036101000a031916815260200191505b5095505050505050604051809103906000f08015801561028d573d6000803e3d6000fd5b509050809150509392505050565b604051610808806102ac833901905600608060405234801561001057600080fd5b5060405161080838038061080883398101806040528101908080519060200190929190805182019291906020018051820192919050505082600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806004908051906020019061009e92919061013c565b506100b7826100bf640100000000026401000000009004565b505050610261565b6002600081548092919060010191905055506060604051908101604052806002548152602001828152602001600081525060016000600254815260200190815260200160002060008201518160000155602082015181600101908051906020019061012b9291906101bc565b506040820151816002015590505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061017d57805160ff19168380011785556101ab565b828001600101855582156101ab579182015b828111156101aa57825182559160200191906001019061018f565b5b5090506101b8919061023c565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101fd57805160ff191683800117855561022b565b8280016001018555821561022b579182015b8281111561022a57825182559160200191906001019061020f565b5b509050610238919061023c565b5090565b61025e91905b8082111561025a576000816000905550600101610242565b5090565b90565b610598806102706000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630121b93f1461007d57806302d05d3f146100aa5780632d35a8a2146101015780633477ee2e1461012c5780633fad9ae0146101e0578063a3ec138d14610270575b600080fd5b34801561008957600080fd5b506100a8600480360381019080803590602001909291905050506102cb565b005b3480156100b657600080fd5b506100bf6103c0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010d57600080fd5b506101166103e6565b6040518082815260200191505060405180910390f35b34801561013857600080fd5b50610157600480360381019080803590602001909291905050506103ec565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156101a3578082015181840152602081019050610188565b50505050905090810190601f1680156101d05780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b3480156101ec57600080fd5b506101f56104ae565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561023557808201518184015260208101905061021a565b50505050905090810190601f1680156102625780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561027c57600080fd5b506102b1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061054c565b604051808215151515815260200191505060405180910390f35b6000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff1615151561032357600080fd5b60008111801561033557506002548111155b151561034057600080fd5b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550600160008281526020019081526020016000206002016000815480929190600101919050555050565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b6001602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561049e5780601f106104735761010080835404028352916020019161049e565b820191906000526020600020905b81548152906001019060200180831161048157829003601f168201915b5050505050908060020154905083565b60048054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105445780601f1061051957610100808354040283529160200191610544565b820191906000526020600020905b81548152906001019060200180831161052757829003601f168201915b505050505081565b60006020528060005260406000206000915054906101000a900460ff16815600a165627a7a72305820f3e3dc4d06c451bb2e230169112b149d91788eb554aaa4016caa99288904cf880029a165627a7a723058203d2f7a2c8f34137f454e5989afa3f07d512dba8ef01f33fd4bd66307a412ce0b0029",
+  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063033a0b0114610046575b600080fd5b34801561005257600080fd5b50610113600480360381019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509192919290505050610155565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008084848461016361029b565b808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020018060200180602001838103835285818151815260200191508051906020019080838360005b838110156101d65780820151818401526020810190506101bb565b50505050905090810190601f1680156102035780820380516001836020036101000a031916815260200191505b50838103825284818151815260200191508051906020019080838360005b8381101561023c578082015181840152602081019050610221565b50505050905090810190601f1680156102695780820380516001836020036101000a031916815260200191505b5095505050505050604051809103906000f08015801561028d573d6000803e3d6000fd5b509050809150509392505050565b604051610808806102ac833901905600608060405234801561001057600080fd5b5060405161080838038061080883398101806040528101908080519060200190929190805182019291906020018051820192919050505082600360006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550806004908051906020019061009e92919061013c565b506100b7826100bf640100000000026401000000009004565b505050610261565b6002600081548092919060010191905055506060604051908101604052806002548152602001828152602001600081525060016000600254815260200190815260200160002060008201518160000155602082015181600101908051906020019061012b9291906101bc565b506040820151816002015590505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061017d57805160ff19168380011785556101ab565b828001600101855582156101ab579182015b828111156101aa57825182559160200191906001019061018f565b5b5090506101b8919061023c565b5090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101fd57805160ff191683800117855561022b565b8280016001018555821561022b579182015b8281111561022a57825182559160200191906001019061020f565b5b509050610238919061023c565b5090565b61025e91905b8082111561025a576000816000905550600101610242565b5090565b90565b610598806102706000396000f300608060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630121b93f1461007d57806302d05d3f146100aa5780632d35a8a2146101015780633477ee2e1461012c5780633fad9ae0146101e0578063a3ec138d14610270575b600080fd5b34801561008957600080fd5b506100a8600480360381019080803590602001909291905050506102cb565b005b3480156100b657600080fd5b506100bf6103c0565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561010d57600080fd5b506101166103e6565b6040518082815260200191505060405180910390f35b34801561013857600080fd5b50610157600480360381019080803590602001909291905050506103ec565b6040518084815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156101a3578082015181840152602081019050610188565b50505050905090810190601f1680156101d05780820380516001836020036101000a031916815260200191505b5094505050505060405180910390f35b3480156101ec57600080fd5b506101f56104ae565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561023557808201518184015260208101905061021a565b50505050905090810190601f1680156102625780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34801561027c57600080fd5b506102b1600480360381019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919050505061054c565b604051808215151515815260200191505060405180910390f35b6000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060009054906101000a900460ff1615151561032357600080fd5b60008111801561033557506002548111155b151561034057600080fd5b60016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060006101000a81548160ff021916908315150217905550600160008281526020019081526020016000206002016000815480929190600101919050555050565b600360009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60025481565b6001602052806000526040600020600091509050806000015490806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561049e5780601f106104735761010080835404028352916020019161049e565b820191906000526020600020905b81548152906001019060200180831161048157829003601f168201915b5050505050908060020154905083565b60048054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156105445780601f1061051957610100808354040283529160200191610544565b820191906000526020600020905b81548152906001019060200180831161052757829003601f168201915b505050505081565b60006020528060005260406000206000915054906101000a900460ff16815600a165627a7a72305820f3e3dc4d06c451bb2e230169112b149d91788eb554aaa4016caa99288904cf880029a165627a7a723058203d2f7a2c8f34137f454e5989afa3f07d512dba8ef01f33fd4bd66307a412ce0b0029",
+  "sourceMap": "51:245:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;51:245:1;;;;;;;",
+  "deployedSourceMap": "51:245:1:-;;;;;;;;;;;;;;;;;;;;;;;;83:211;;8:9:-1;5:2;;;30:1;27;20:12;5:2;83:211:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;179:7;197:10;224:8;234:13;249:9;211:48;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;211:48:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;211:48:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;211:48:1;197:63;;285:1;270:17;;83:211;;;;;;:::o;51:245::-;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.2;\n\nimport './Election.sol';\n\ncontract ElectionFactory {\n\n    function newElection (address _creator, string allCandidates, string _question) public returns (address){\n        Election e = (new Election(_creator, allCandidates, _question));\n        return address(e);\n    }\n}",
+  "sourcePath": "/Users/fullstackacademy/Desktop/election/contracts/ElectionFactory.sol",
+  "ast": {
+    "absolutePath": "/Users/fullstackacademy/Desktop/election/contracts/ElectionFactory.sol",
+    "exportedSymbols": {
+      "ElectionFactory": [
+        131
+      ]
+    },
+    "id": 132,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 103,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/Users/fullstackacademy/Desktop/election/contracts/Election.sol",
+        "file": "./Election.sol",
+        "id": 104,
+        "nodeType": "ImportDirective",
+        "scope": 132,
+        "sourceUnit": 102,
+        "src": "25:24:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          101
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 131,
+        "linearizedBaseContracts": [
+          131
+        ],
+        "name": "ElectionFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 129,
+              "nodeType": "Block",
+              "src": "187:107:1",
+              "statements": [
+                {
+                  "assignments": [
+                    116
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 116,
+                      "name": "e",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 130,
+                      "src": "197:10:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Election_$101",
+                        "typeString": "contract Election"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 115,
+                        "name": "Election",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 101,
+                        "src": "197:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Election_$101",
+                          "typeString": "contract Election"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 124,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 119,
+                            "name": "_creator",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 106,
+                            "src": "224:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 120,
+                            "name": "allCandidates",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 108,
+                            "src": "234:13:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 121,
+                            "name": "_question",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 110,
+                            "src": "249:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 118,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "NewExpression",
+                          "src": "211:12:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$_t_contract$_Election_$101_$",
+                            "typeString": "function (address,string memory,string memory) returns (contract Election)"
+                          },
+                          "typeName": {
+                            "contractScope": null,
+                            "id": 117,
+                            "name": "Election",
+                            "nodeType": "UserDefinedTypeName",
+                            "referencedDeclaration": 101,
+                            "src": "215:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Election_$101",
+                              "typeString": "contract Election"
+                            }
+                          }
+                        },
+                        "id": 122,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "211:48:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Election_$101",
+                          "typeString": "contract Election"
+                        }
+                      }
+                    ],
+                    "id": 123,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "210:50:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Election_$101",
+                      "typeString": "contract Election"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "197:63:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 126,
+                        "name": "e",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 116,
+                        "src": "285:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Election_$101",
+                          "typeString": "contract Election"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_Election_$101",
+                          "typeString": "contract Election"
+                        }
+                      ],
+                      "id": 125,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "277:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 127,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "277:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 114,
+                  "id": 128,
+                  "nodeType": "Return",
+                  "src": "270:17:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 130,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "newElection",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 111,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 106,
+                  "name": "_creator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 130,
+                  "src": "105:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 105,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "105:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 108,
+                  "name": "allCandidates",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 130,
+                  "src": "123:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 107,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "123:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 110,
+                  "name": "_question",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 130,
+                  "src": "145:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 109,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "104:58:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 114,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 113,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 130,
+                  "src": "179:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 112,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "179:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:9:1"
+            },
+            "scope": 131,
+            "src": "83:211:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 132,
+        "src": "51:245:1"
+      }
+    ],
+    "src": "0:296:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/fullstackacademy/Desktop/election/contracts/ElectionFactory.sol",
+    "exportedSymbols": {
+      "ElectionFactory": [
+        131
+      ]
+    },
+    "id": 132,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 103,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "/Users/fullstackacademy/Desktop/election/contracts/Election.sol",
+        "file": "./Election.sol",
+        "id": 104,
+        "nodeType": "ImportDirective",
+        "scope": 132,
+        "sourceUnit": 102,
+        "src": "25:24:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [
+          101
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 131,
+        "linearizedBaseContracts": [
+          131
+        ],
+        "name": "ElectionFactory",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 129,
+              "nodeType": "Block",
+              "src": "187:107:1",
+              "statements": [
+                {
+                  "assignments": [
+                    116
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 116,
+                      "name": "e",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 130,
+                      "src": "197:10:1",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_Election_$101",
+                        "typeString": "contract Election"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 115,
+                        "name": "Election",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 101,
+                        "src": "197:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Election_$101",
+                          "typeString": "contract Election"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 124,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 119,
+                            "name": "_creator",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 106,
+                            "src": "224:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 120,
+                            "name": "allCandidates",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 108,
+                            "src": "234:13:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 121,
+                            "name": "_question",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 110,
+                            "src": "249:9:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_address",
+                              "typeString": "address"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 118,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "NewExpression",
+                          "src": "211:12:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$_t_contract$_Election_$101_$",
+                            "typeString": "function (address,string memory,string memory) returns (contract Election)"
+                          },
+                          "typeName": {
+                            "contractScope": null,
+                            "id": 117,
+                            "name": "Election",
+                            "nodeType": "UserDefinedTypeName",
+                            "referencedDeclaration": 101,
+                            "src": "215:8:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_Election_$101",
+                              "typeString": "contract Election"
+                            }
+                          }
+                        },
+                        "id": 122,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "211:48:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Election_$101",
+                          "typeString": "contract Election"
+                        }
+                      }
+                    ],
+                    "id": 123,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "210:50:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_Election_$101",
+                      "typeString": "contract Election"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "197:63:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 126,
+                        "name": "e",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 116,
+                        "src": "285:1:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Election_$101",
+                          "typeString": "contract Election"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_Election_$101",
+                          "typeString": "contract Election"
+                        }
+                      ],
+                      "id": 125,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "277:7:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 127,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "277:10:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 114,
+                  "id": 128,
+                  "nodeType": "Return",
+                  "src": "270:17:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 130,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "newElection",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 111,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 106,
+                  "name": "_creator",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 130,
+                  "src": "105:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 105,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "105:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 108,
+                  "name": "allCandidates",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 130,
+                  "src": "123:20:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 107,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "123:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 110,
+                  "name": "_question",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 130,
+                  "src": "145:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 109,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "145:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "104:58:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 114,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 113,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 130,
+                  "src": "179:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 112,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "179:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:9:1"
+            },
+            "scope": 131,
+            "src": "83:211:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 132,
+        "src": "51:245:1"
+      }
+    ],
+    "src": "0:296:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x3d4c0b207c5acc2792eb866bed036be30b862aec",
+      "transactionHash": "0x51d331ce6b3eb550011626e097ab73943fe121370b813d3da2c7af99b3d6bd1f"
+    }
+  },
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-06-06T19:13:11.637Z"
+}
