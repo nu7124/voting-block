@@ -28,13 +28,17 @@ contract Election {
         question = _question;
         addCandidate(allCandidates);
         // for(uint i=0; i<allCandidates.length; i++){
-        //     addCandidate(allCandidates[i]);
+        //     addCandidate(bytes32ToString(allCandidates[i]));
         // }
     }
 
-    function addCandidate(string _name) private {
+    function addCandidate(string _name) public {
         candidatesCount++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
+    }
+
+    function addQuestion(string _question) public{
+        question=_question;
     }
 
     function vote(uint _candidateId) public {
@@ -44,5 +48,27 @@ contract Election {
         voters[msg.sender] = true;
 
         candidates[_candidateId].voteCount ++;
+    }
+
+    /*
+        Purpose: takes in a bytes32 and convert it to a string and returns the string
+        Arguments: bytes32 valueToConvert
+        Returns: String
+    */
+    function bytes32ToString(bytes32 x) public constant returns (string) {
+        bytes memory bytesString = new bytes(32);
+        uint charCount = 0;
+        for (uint j = 0; j < 32; j++) {
+            byte char = byte(bytes32(uint(x) * 2 ** (8 * j)));
+            if (char != 0) {
+                bytesString[charCount] = char;
+                charCount++;
+            }
+        }
+        bytes memory bytesStringTrimmed = new bytes(charCount);
+        for (j = 0; j < charCount; j++) {
+            bytesStringTrimmed[j] = bytesString[j];
+        }
+        return string(bytesStringTrimmed);
     }
 }
