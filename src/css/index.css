@@ -4,20 +4,29 @@
 }
 
 #main {
-    background-color: red;
-    width:100%;
-    height:100vh;
+    background-color: #2C3443;
     display: grid;
-    grid-template-rows: 1fr 9fr;
 }
 
-#main-topBar {
-    width:100%;
-    background-color: white;
+#main_nav {
+    background-color: #444A56;
+    width:100vw;
+    height:10vh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
 }
 
-#main-topBar-create {
-    margin:5%;
+#main_nav_title {
+    color:#ffefdf;
+    font-family: 'Kaushan Script', cursive;
+}
+
+#main_myPolls {
+    padding:2%;
+}
+
+.main_myPolls_title {
+    color:#ffefdf;
+    font-family: 'Indie Flower', cursive;
 }
