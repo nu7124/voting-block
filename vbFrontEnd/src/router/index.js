@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/Home'
+import Login from '@/components/Login'
+import Polls from '@/components/Polls'
+import Form from '@/components/Form'
 
 Vue.use(Router)
 
@@ -8,8 +11,13 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Polls',
+      component: Polls
+    },
+    {
+      path: '/form',
+      name: 'Form',
+      component: Form
     }
   ]
 })
