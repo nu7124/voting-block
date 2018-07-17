@@ -1,10 +1,8 @@
 <template>
   <div id="polls">
-      <h1>{{msg}}</h1>
-      <h1>{{msg}}</h1>
-      <h1>{{msg}}</h1>
-      <h1>{{msg}}</h1>
-      <h1>{{msg}}</h1>
+    <ul v-for="poll in allPolls" :key="poll">
+      <h1>{{ poll }}</h1>
+    </ul>
   </div>
 </template>
 
@@ -12,10 +10,9 @@
 export default {
   name: 'Home',
   data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
+
+  },
+  props: ['allPolls']
 }
 </script>
 

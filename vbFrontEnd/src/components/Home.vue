@@ -5,13 +5,12 @@
     </div>
 
     <div id="main_myPolls">
-        <router-link to="/"><button class="button">MY POLLS</button></router-link>
+        <router-link to="/"><button class="button">My Polls</button></router-link>
         <router-link to="/form"><button class="button">New Poll</button></router-link>
     </div>
 
     <div id="main_pollList">
-        <!-- <Polls></Polls> -->
-        <router-view></router-view>
+        <router-view :allPolls="allPolls"></router-view>
     </div>
   </div>
 </template>
@@ -22,7 +21,8 @@ export default {
   name: 'Home',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      allPolls:[1,2,3]
     }
   },
 components:{
@@ -43,7 +43,6 @@ components:{
 }
 
 #main_pollList{
-    border: 2px solid white;
     min-height: 1px;
 }
 
@@ -60,13 +59,13 @@ components:{
 
 .main_myPolls_title {
     color:#ffefdf;
-    font-family: 'Indie Flower', cursive;
 }
 
 .button {
     background-color: #ffefdf;
     border-radius: 1em;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Merienda', cursive;
+    color:#212121;
     font-size: 1.1em;
     width:30vw;
     outline:none;

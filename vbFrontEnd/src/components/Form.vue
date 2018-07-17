@@ -28,6 +28,7 @@ export default {
 
 .text{
     color:#ffefdf;
+    font-family: 'Merienda', cursive;
 }
 
 #inputBox{
@@ -37,12 +38,15 @@ export default {
     outline: none;
     margin:4%;
     font-size:1em;
+    border:none;
+    padding:1%;
     border-radius:1em;
     margin:2%;
 }
 
 #create{
     background-color: #ffefdf;
+    font-family: 'Merienda', cursive;
     font-size: 1.1em;
     padding:4%;
     margin-left:auto;
