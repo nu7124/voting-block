@@ -22,7 +22,33 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      allPolls:[1,2,3]
+      allPolls:[
+          {question:"Vue better than React?",
+          yes:29,
+          no:41},
+          {question:"Kanye a genius?",
+          yes:20,
+          no:12},
+          {question:"Pineapple on Pizza?",
+          yes:54,
+          no:34},
+          {question:"Light themed editors?",
+          yes:0,
+          no:100},
+          {question:"iOS better than Android?",
+          yes:9,
+          no:15},
+          {question:"Burrito better than bowl?",
+          yes:20,
+          no:20},
+          {question:"BBQ sauce on pizza?",
+          yes:54,
+          no:42},
+          {question:"Linux is best for devs?",
+          yes:30,
+          no:18},
+          
+      ]
     }
   },
 components:{
@@ -34,7 +60,6 @@ components:{
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #main_nav {
-    background-color: #444A56;
     width:100vw;
     height:10vh;
     display: grid;
