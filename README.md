@@ -29,7 +29,8 @@ npm install -g truffle
 ```shell
 npm install
 truffle migrate --reset
-npm run dev
+cd vbFrontEnd
+npm start
 ```
 #### You should be redirected to the homepage
 
