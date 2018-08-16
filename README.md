@@ -5,6 +5,14 @@
 ## Objective
 A web app built with smart contracts that allows users to create and share polls with other users.
 
+## Pictures and descriptions
+<div style="text-align: center;" markdown="1" >
+  <h3  markdown="1">Form for asking a Question</h3>
+ <img src = './vbFrontEnd/src/assets/pollForm.png'/>
+  <h3  markdown="1">See list of current polls</h3>
+ <img src = './vbFrontEnd/src/assets/allPolls.png'/>
+</div>
+
 ## Install
 
 ### Clone the Repo
